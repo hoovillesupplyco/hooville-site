@@ -15,10 +15,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      justify-content: flex-start;
+      min-height: 100vh;
       text-align: center;
+      padding: 40px 20px;
+      box-sizing: border-box;
     }
+
     .logo img {
       max-width: 250px;
       height: auto;
@@ -48,6 +51,18 @@
       color: #666;
       margin-top: 20px;
     }
+
+    /* Space before Facebook feed */
+    .fb-container {
+      margin-top: 40px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    /* Make Facebook feed responsive */
+    .fb-page, .fb-page iframe[style] {
+      width: 100% !important;
+    }
   </style>
 </head>
 <body>
@@ -64,13 +79,29 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
     </a>
   </div>
+
   <div class="coming-soon">
     Website coming soon. Follow us for updates!
   </div>
-  
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v24.0&appId=APP_ID"></script>
- <div class="fb-page" data-href="https://www.facebook.com/hoovillesupplyco/" data-tabs="timeline" data-width="1000" data-height="500" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/hoovillesupplyco/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/hoovillesupplyco/">Hooville Supply Co.</a></blockquote></div>
-  
+
+  <div class="fb-container">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v24.0&appId=APP_ID"></script>
+
+    <div class="fb-page"
+         data-href="https://www.facebook.com/hoovillesupplyco/"
+         data-tabs="timeline"
+         data-width="500"
+         data-height="600"
+         data-small-header="true"
+         data-adapt-container-width="true"
+         data-hide-cover="false"
+         data-show-facepile="true">
+      <blockquote cite="https://www.facebook.com/hoovillesupplyco/" class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/hoovillesupplyco/">Hooville Supply Co.</a>
+      </blockquote>
+    </div>
+  </div>
+
 </body>
 </html>
